@@ -44,7 +44,7 @@ class SplashScreenActivity : AppCompatActivity() {
     }
     private val showPart2Runnable = Runnable {
         // Delayed display of UI elements
-        supportActionBar?.show()
+        supportActionBar?.hide()
         fullscreenContentControls.visibility = View.VISIBLE
     }
     private var isFullscreen: Boolean = false
@@ -63,6 +63,7 @@ class SplashScreenActivity : AppCompatActivity() {
             MotionEvent.ACTION_DOWN -> if (AUTO_HIDE) {
                 val mainActivity = Intent (this, MainActivity::class.java)
                 startActivity(mainActivity)
+                finish()
             }
             MotionEvent.ACTION_UP -> view.performClick()
             else -> {}
