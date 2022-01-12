@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/side_nav_bar"
+    android:theme="@style/ThemeOverlay.TodoList.FullscreenContainer"
+    tools:context=".SplashScreenActivity">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+    <ImageView
+        android:id="@+id/fullscreen_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="@dimen/nav_header_vertical_spacing"
+        android:paddingBottom="120dp"
+        android:gravity="center"
+        app:srcCompat="@drawable/ic_main_todo"/>
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:id="@+id/fullscreen_content_controls"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:orientation="horizontal"
+            android:paddingHorizontal="16dp"
+            tools:ignore="UselessParent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/dummy_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/start"
+                android:padding="16dp"
+                app:backgroundTint="@android:color/transparent"
+                app:rippleColor="#33AAAAAA"
+                app:strokeColor="@color/white"
+                app:strokeWidth="2dp"/>
+
+        </LinearLayout>
+    </FrameLayout>
+
+</FrameLayout>

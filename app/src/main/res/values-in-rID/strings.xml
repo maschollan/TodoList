@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TodoList</string>
+    <string name="navigation_drawer_close">Tutup Menu Navigasi</string>
+    <string name="start">Mulai</string>
+    <string name="calendar">Kalender</string>
+    <string name="new_todo">Kegiatan Baru</string>
+    <string name="hello_blank_fragment">Fragment Halo Kosong</string>
+    <string name="about">Tentang</string>
+    <string name="menu_about">Tentang</string>
+    <string name="menu_new_todo">Kegiatan Baru</string>
+    <string name="menu_slideshow">Slide show</string>
+    <string name="menu_calendar">Kalender</string>
+    <string name="menu_gallery">Galeri</string>
+    <string name="menu_home">Beranda</string>
+    <string name="action_settings">Pengaturan</string>
+    <string name="features_not_yet_available">Mohon maaf fitur belum tersedia</string>
+    <string name="home">Beranda</string>
+</resources>
