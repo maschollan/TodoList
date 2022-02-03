@@ -51,17 +51,4 @@ object DataTodo {
         "awkawoawkoak",
         "Naikin harga setinggi mungkin"
     )
-
-    val listData: ArrayList<Todo>
-        get() {
-            val list = arrayListOf<Todo>()
-            for(position in todoTask.indices) {
-                val todo = Todo()
-                todo.task = todoTask[position]
-                todo.time = todoTime[position]
-                todo.note = todoNote[position]
-                list.add(todo)
-            }
-            return list
-        }
 }
