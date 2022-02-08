@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.kelompok4.todolist.R
 import com.kelompok4.todolist.databinding.FragmentHomeBinding
-import com.kelompok4.todolist.room.Todo
+import com.kelompok4.todolist.todo.Todo
 import com.kelompok4.todolist.room.TodoDB
 import com.kelompok4.todolist.todo.DataTodo
 import com.kelompok4.todolist.todo.TodoAdapter
@@ -41,10 +41,10 @@ class HomeFragment : Fragment() {
         val root : View = binding.root
         var rvTodo = binding.rvDosen
 
-//        list.addAll(DataTodo.listData)
+        list.addAll(DataTodo.listData)
 
         rvTodo.setHasFixedSize(true)
-//        rvTodo.adapter = TodoAdapter(list)
+        rvTodo.adapter = TodoAdapter(list)
         rvTodo.layoutManager = LinearLayoutManager(activity)
         rvTodo.addItemDecoration(DividerItemDecoration(activity, DividerItemDecoration.VERTICAL))
 
@@ -67,18 +67,18 @@ class HomeFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
-        loadNote()
+//        loadNote()
     }
 
-    fun loadNote(){
-        CoroutineScope(Dispatchers.IO).launch {
-            val notes = db?.todoDao()?.getTodos()
-            Log.d("MainActivity", "dbResponse: $notes")
-            withContext(Dispatchers.Main){
-                todoAdapter.setData(notes!!)
-            }
-        }
-    }
+//    fun loadNote(){
+//        CoroutineScope(Dispatchers.IO).launch {
+//            val notes = db?.todoDao()?.getTodos()
+//            Log.d("MainActivity", "dbResponse: $notes")
+//            withContext(Dispatchers.Main){
+//                todoAdapter.setData(notes!!)
+//            }
+//        }
+//    }
 
     override fun onDestroyView() {
         super.onDestroyView()

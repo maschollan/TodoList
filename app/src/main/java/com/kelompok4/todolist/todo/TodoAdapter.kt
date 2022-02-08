@@ -6,7 +6,6 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.kelompok4.todolist.R
-import com.kelompok4.todolist.room.Todo
 
 class TodoAdapter(private val listTodo : ArrayList<Todo>) : RecyclerView.Adapter<TodoAdapter.CardViewHolder>(){
     inner class CardViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -24,11 +23,11 @@ class TodoAdapter(private val listTodo : ArrayList<Todo>) : RecyclerView.Adapter
         val todo = listTodo[position]
 
         holder.tvNote.text = todo.note
-        holder.tvTask.text = todo.activity
-        holder.tvTime.text = todo.date + " | " + todo.time
+        holder.tvTask.text = todo.task
+        holder.tvTime.text = todo.time
     }
 
-    override fun getItemCount() = 50
+    override fun getItemCount() = DataTodo.listData.size
 
     fun setData(newList: List<Todo>) {
         listTodo.clear()

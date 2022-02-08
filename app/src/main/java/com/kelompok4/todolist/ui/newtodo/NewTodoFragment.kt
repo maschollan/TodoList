@@ -14,7 +14,7 @@ import com.google.android.material.timepicker.TimeFormat
 import com.kelompok4.todolist.R
 import com.kelompok4.todolist.databinding.FragmentNewTodoBinding
 import com.kelompok4.todolist.room.TodoDB
-import com.kelompok4.todolist.room.Todo
+import com.kelompok4.todolist.todo.Todo
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -77,20 +77,20 @@ class NewTodoFragment : Fragment() {
         return root
     }
 
-    private fun setupListener() {
-        binding.btnSave.setOnClickListener {
-            CoroutineScope(Dispatchers.IO).launch {
-                db?.todoDao()?.addTodo(
-                    Todo(0,
-                        binding.activityInput.editText?.text.toString(),
-                        binding.activityInput.editText?.text.toString(),
-                        binding.activityInput.editText?.text.toString(),
-                        binding.activityInput.editText?.text.toString(),
-                        binding.activityInput.editText?.text.toString())
-                )
-            }
-        }
-    }
+//    private fun setupListener() {
+//        binding.btnSave.setOnClickListener {
+//            CoroutineScope(Dispatchers.IO).launch {
+//                db?.todoDao()?.addTodo(
+//                    Todo(0,
+//                        binding.activityInput.editText?.text.toString(),
+//                        binding.activityInput.editText?.text.toString(),
+//                        binding.activityInput.editText?.text.toString(),
+//                        binding.activityInput.editText?.text.toString(),
+//                        binding.activityInput.editText?.text.toString())
+//                )
+//            }
+//        }
+//    }
 
     override fun onDestroyView() {
         super.onDestroyView()

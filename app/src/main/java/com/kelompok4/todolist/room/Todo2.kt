@@ -5,7 +5,7 @@ import androidx.room.PrimaryKey
 
 @Entity
 
-data class Todo (
+data class Todo2 (
     @PrimaryKey(autoGenerate = true)
     val id: Int,
 

@@ -5,17 +5,17 @@ import androidx.room.*
 @Dao
 interface TodoDao {
     @Insert
-    suspend fun addTodo(todo: com.kelompok4.todolist.room.Todo)
+    suspend fun addTodo(todo: com.kelompok4.todolist.room.Todo2)
 
     @Update
-    suspend fun updateTodo(todo: Todo)
+    suspend fun updateTodo(todo: Todo2)
 
     @Delete
-    suspend fun deleteTodo(todo: Todo)
+    suspend fun deleteTodo(todo: Todo2)
 
-    @Query("SELECT * FROM todo")
-    suspend fun getTodos(): List<Todo>
+    @Query("SELECT * FROM todo2")
+    suspend fun getTodos(): List<Todo2>
 
-    @Query("SELECT * FROM todo WHERE id=:todo_id")
-    suspend fun getTodo(todo_id: Int): List<Todo>
+    @Query("SELECT * FROM todo2 WHERE id=:todo_id")
+    suspend fun getTodo(todo_id: Int): List<Todo2>
 }
